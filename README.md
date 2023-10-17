@@ -34,6 +34,13 @@ To gain a bit more control and only trigger a page build manually usw
 on:
   workflow_dispatch:
 ````
+> **Warning**
+> If you do not supply the action with an access token or an SSH key, you must access your repositories settings and provide `Read and Write Permissions` to the provided `GITHUB_TOKEN`, otherwise you'll potentially run into permission issues. Alternatively you can set the following in your workflow file to grant the action the permissions it needs.
+
+```yml
+permissions:
+  contents: write
+```
 
 ## Input
 
@@ -62,4 +69,19 @@ on:
 |-----------------|--------------------------------------------------------------------------|
 | `page`          | A zip of the build page                                                 |
 
+## Special thanxs
+As is the case with most software this action is based on the work of others, and uses there code. We would like to give a special shout out to the following parties and thier code
 
+- [James Ives | github-pages-deploy-action#readme](https://github.com/JamesIves/github-pages-deploy-action#readme]).
+- [SpicyPizza | create-envfile](https://github.com/SpicyPizza/create-envfile).
+
+## Maintainers
+This software is maintained by the Developers Italia team.
+
+## License
+© 2022 Gemeente Rotterdam
+
+Licensed under the EUPL. The version control system provides attribution for specific lines of code.
+
+## Remarks
+This GitHub Action is published in the GitHub Marketplace. As such, you can find the [Terms of Service here](). Also, [here]() you can find the GitHub Marketplace Developer Agreement.
