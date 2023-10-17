@@ -1,4 +1,4 @@
-# Open Catalogi-action
+# Open Catalogi action
 This action builds on organisation specific Open Catalogi page as static github page.|
 
 ## Usage

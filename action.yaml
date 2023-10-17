@@ -110,12 +110,15 @@ runs:
         node-version: 14
 
     - name: Install dependencies
+      shell: bash
       run: cd pwa && npm install
 
     - name: Remove old Gatsby cache
+      shell: bash
       run: rm -rf pwa/.cache
 
     - name: Build application
+      shell: bash
       run: cd pwa && npm run build
 
     - name: Deploy to GitHub Pages
