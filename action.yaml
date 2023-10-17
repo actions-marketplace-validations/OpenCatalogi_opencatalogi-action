@@ -110,16 +110,19 @@ runs:
         node-version: 14
 
     - name: Install dependencies
+      shell: bash
       run: cd pwa && npm install
 
     - name: Remove old Gatsby cache
+      shell: bash
       run: rm -rf pwa/.cache
 
     - name: Build application
+      shell: bash
       run: cd pwa && npm run build
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.0
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: ${{ inputs.github_pages_branch }}
         folder: pwa/public
